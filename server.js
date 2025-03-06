@@ -24,15 +24,23 @@ app.use(session({
     saveUninitialized: true,
     cookie: { secure: false }
 }));
-
-// MongoDB Connection
-const URL = process.env.MONGO_URI;
-mongoose.connect(URL)
-    .then(() => console.log('Connected to MongoDB'))
-    .catch((err) => {
+const startServer = async () => {
+    try {
+        // MongoDB Connection
+        const URL = process.env.MONGO_URI;
+        await mongoose.connect(URL, { useNewUrlParser: true, useUnifiedTopology: true });
+        console.log('Connected to MongoDB');
+        // Start Server
+        const PORT = process.env.PORT || 5000;
+        app.listen(PORT, () => {
+            console.log(`Server is running on port ${PORT}`);
+        });
+    } catch (err) {
         console.error('Error connecting to MongoDB:', err);
         process.exit(1);
-    });
+    }
+};
+startServer();
 
 // MongoDB User Model
 const User = mongoose.model('logininfos', new mongoose.Schema({
@@ -80,7 +88,7 @@ app.post('/login', async (req, res) => {
         const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET, { expiresIn: '1h' });
         req.session.regNo = regNo;
 
-        return res.status(200).json({ message: 'Login successful',token});
+        return res.status(200).json({ message: 'Login successful', token });
     } catch (err) {
         console.error(err);
         return res.status(500).json({ error: 'Server error' });
@@ -109,18 +117,12 @@ app.get('/api/items', async (req, res) => {
     }
 });
 
-// Serve React Frontend
-app.use(express.static(path.join(__dirname, "client/build")));
+// Server React Frontend
+app.use(express.static(path.join(__dirname, "build")));
 
-// Redirect all unknown routes to React index.js
-// app.get("*", (req, res) => {
-//     res.sendFile(path.join(__dirname, "client/build", "index.js"));
-// });
-
-// Start Server
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
+// Redirect all unknown routes to React index.html
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "build", "index.html"));
 });
 
 
