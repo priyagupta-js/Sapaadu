@@ -1,11 +1,15 @@
-const express = require('express');
-const mongoose = require('mongoose');
-const bcrypt = require('bcryptjs');
-const jwt = require('jsonwebtoken');
-const cors = require('cors');
-const session = require('express-session');
-const path = require("path");
-require('dotenv').config();
+import express from 'express';
+import mongoose from 'mongoose';
+import bcrypt from 'bcryptjs';
+import jwt from 'jsonwebtoken';
+import cors from 'cors';
+import session from 'express-session';
+import path from 'path';
+import dotenv from 'dotenv';
+
+
+dotenv.config(); // Load environment variables
+
 
 // Initialize Express app
 const app = express();
