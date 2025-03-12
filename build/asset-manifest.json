@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/static/css/main.58f5d8e6.css",
+    "main.js": "/static/js/main.8671ba21.js",
+    "static/media/northsquare.jpeg": "/static/media/northsquare.f09f9c95072a23795201.jpeg",
+    "static/media/vegpizza.png": "/static/media/vegpizza.b904eb42c9028eb275d1.png",
+    "static/media/gazebo1.png": "/static/media/gazebo1.9ddf3057d6b313ce0d09.png",
+    "static/media/bg.jpg": "/static/media/bg.4b0a657d813a96f7fe5e.jpg",
+    "static/media/lassihouse.png": "/static/media/lassihouse.79df294710943930b473.png",
+    "static/media/aavin.png": "/static/media/aavin.6a47f79f38ec73eb496b.png",
+    "static/media/logo.png": "/static/media/logo.b562ea36e90f4fbce5cc.png",
+    "index.html": "/index.html",
+    "main.58f5d8e6.css.map": "/static/css/main.58f5d8e6.css.map",
+    "main.8671ba21.js.map": "/static/js/main.8671ba21.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.58f5d8e6.css",
+    "static/js/main.8671ba21.js"
+  ]
+}

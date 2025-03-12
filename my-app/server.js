@@ -6,6 +6,8 @@ import cors from 'cors';
 import session from 'express-session';
 import path from 'path';
 import dotenv from 'dotenv';
+import { dirname } from 'path';
+import { fileURLToPath } from 'url';
 
 
 dotenv.config(); // Load environment variables
@@ -13,6 +15,10 @@ dotenv.config(); // Load environment variables
 
 // Initialize Express app
 const app = express();
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
 
 // Middleware
 const corsOptions = {
