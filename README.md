@@ -25,10 +25,10 @@ Git (for cloning the repository)
 Use npm, pnpm, or yarn to install dependencies:
 
 npm install
-# OR
+OR
 yarn install
-# OR
-pnpm install
+OR
+pnpm install <br>
 3️⃣ Setup Environment Variables
 This project uses a .env file for sensitive configurations. Follow these steps:
 
@@ -41,10 +41,11 @@ Open .env and update the placeholders with your actual values.
 Run the following command to start the Vite development server:
 
 npm run dev
-# OR
+OR
 yarn dev
-# OR
+OR
 pnpm dev
+
 This will start the project at http://localhost:5173/ by default.
 
 Happy Coding!!
