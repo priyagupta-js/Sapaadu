@@ -62,6 +62,3 @@ pnpm dev
 <p>This will start the project at <a href="http://localhost:5173/">http://localhost:5173/</a> by default.</p>
 
 <h2>🎉 Happy Coding!!</h2>
-
-
-
