@@ -18,6 +18,19 @@
     padding-left: 10px;
 }
 
+.cart-container
+{
+    padding: 2px;
+}
+
+
+
+.cart-icon
+{
+    color: #000;
+    font-size: 2rem;
+}
+
  @media (max-width: 480px) {
     .navbar { 
         padding: 2px;
