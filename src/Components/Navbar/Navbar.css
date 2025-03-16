@@ -17,18 +17,24 @@
     align-items: center;
     padding-left: 10px;
 }
-
-.cart-container
+.navright
 {
-    padding: 2px;
+display: flex;
+padding:5px ;
+justify-content: center;
+align-items:center;
+gap:20px;
 }
 
-
-
+.acct-icon
+{
+    font-size:1.8rem ;
+    color: #000;
+}
 .cart-icon
 {
-    color: #000;
     font-size: 2rem;
+    color: #000;
 }
 
  @media (max-width: 480px) {

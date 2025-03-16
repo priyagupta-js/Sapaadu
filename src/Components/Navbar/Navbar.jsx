@@ -4,6 +4,7 @@ import "./Navbar.css";
 // import Text from "./Logo/Text/Text";
 import Logo from "../Navbar/Logo/Logo"
 import { IoCart } from "react-icons/io5";
+import { FaUser } from "react-icons/fa";
 import {Link} from "react-router-dom";
 
 function Navbar() {
@@ -15,8 +16,9 @@ function Navbar() {
                 <Logo />
                 
             </div>
-            <div className="naright">
-                <div className="cart-container"><Link to="/cart"><IoCart className="cart-icon"/></Link></div>
+            <div className="navright">
+                <Link to="/cart"><IoCart className="cart-icon"/></Link>
+                <Link to ="/account"><FaUser className="acct-icon"/></Link>
             </div>
         </div>
     );
