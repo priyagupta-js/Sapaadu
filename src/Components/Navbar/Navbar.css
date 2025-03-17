@@ -25,7 +25,12 @@ justify-content: center;
 align-items:center;
 gap:20px;
 }
-
+.search-bar
+{
+    padding: 7px 3px;
+    border: 2px solid #000;
+    border-radius: 7px;
+}
 .acct-icon
 {
     font-size:1.8rem ;

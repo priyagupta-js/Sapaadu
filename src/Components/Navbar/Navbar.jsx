@@ -17,6 +17,9 @@ function Navbar() {
                 
             </div>
             <div className="navright">
+            <div className="searchBar-container">
+                <input type="text" className="search-bar" placeholder="search ..."/>
+            </div>
                 <Link to="/cart"><IoCart className="cart-icon"/></Link>
                 <Link to ="/account"><FaUser className="acct-icon"/></Link>
             </div>
