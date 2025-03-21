@@ -27,7 +27,8 @@ gap:20px;
 }
 .search-bar
 {
-    padding: 7px 3px;
+    padding: 9px 5px;
+    width: 200px;
     border: 2px solid #000;
     border-radius: 7px;
 }
