@@ -115,6 +115,16 @@ const Menu = mongoose.model('fooditems', new mongoose.Schema({
     image: String
 }));
 
+// // MongoDB new Menu Model
+// const Menu = mongoose.model('menuitems', new mongoose.Schema({
+//     name: String,
+//     price: Number,
+//      category : String
+//     description: String,
+//     image: String
+// }));
+
+
 // Fetch All Food Items Route
 app.get('/api/items', async (req, res) => {
     console.log("Fetching food items...");
