@@ -1,6 +1,7 @@
 import React from "react";
 import "./Footer.css";
 import Logo from "../Navbar/Logo/Logo";
+import Link from "react-router-dom";
 // import Text from "../Navbar/Logo/Text/Text";
 // import Image from "../Navbar/Logo/Image/Image";
 // import logo from "../../Assests/logo.png";
@@ -20,7 +21,7 @@ function Footer() {
             <div className="footer-section">
               <h2>Company</h2>
               <p>
-                <a href="#About Us">About Us</a>
+                <Link to="/about">About Us</Link>
               </p>
               <p>
                 <a href="#Team">Team</a>
