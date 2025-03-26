@@ -24,13 +24,13 @@ function Footer() {
                 <Link to="/about">About Us</Link>
               </p>
               <p>
-                <a href="#Team">Team</a>
+                <Link to="/team"></Link>
               </p>
             </div>
             <div className="footer-section">
               <h2>Contact Us</h2>
               <p>
-                <a href="#Help & Support">Help & Support</a>
+              <Link to="/help">Help & Support</Link>
               </p>
             </div>
             <div className="footer-section">
