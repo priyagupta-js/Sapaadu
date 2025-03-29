@@ -109,6 +109,7 @@ app.post('/login', async (req, res) => {
 const Menu = mongoose.model('fooditems', new mongoose.Schema({
     name: String,
     price: Number,
+    category : String,
     rating: Number,
     reviews: Number,
     description: String,
