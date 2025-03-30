@@ -144,7 +144,7 @@ function Homepage(){
         <div className="cafe-card">
             <img src="" alt="" />
           <div className="category">
-            North |
+            North-Indian | South Indian |
           </div>
         </div>
 {/* using map function , display cafe list */}
