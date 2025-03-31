@@ -105,25 +105,45 @@ app.post('/login', async (req, res) => {
     }
 });
 
-// MongoDB Menu Model
-const Menu = mongoose.model('fooditems', new mongoose.Schema({
-    name: String,
-    price: Number,
-    category : String,
-    rating: Number,
-    reviews: Number,
-    description: String,
-    image: String
-}));
+// MongoDB Cafe model
 
-// // MongoDB new Menu Model
-// const Menu = mongoose.model('menuitems', new mongoose.Schema({
+const Cafe = mongoose.model('cafes' , new mongoose.Schema({
+    name:String,
+    image:String,
+    category:[String]
+}))
+
+app.get('/api/cafes', async(req,res) =>{
+    // console.log("fetching cafe name");
+    try{
+        const cafes = await Cafe.find();
+        res.json(cafes);
+    }
+    catch(error){
+console.log("error fetching cafes",error);
+res.status(500).send("Server Error");
+    }
+})
+
+// MongoDB Menu Model
+// const Menu = mongoose.model('fooditems', new mongoose.Schema({
 //     name: String,
 //     price: Number,
-//      category : String
+//     category : String,
+//     rating: Number,
+//     reviews: Number,
 //     description: String,
 //     image: String
 // }));
+
+// MongoDB new MenuItems Model
+const Menu = mongoose.model('menuitems', new mongoose.Schema({
+    name: String,
+    price: Number,
+    category : String,
+    description: String,
+    image: String
+}));
 
 
 // Fetch All Food Items Route
