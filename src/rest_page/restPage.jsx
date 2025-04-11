@@ -1,0 +1,4 @@
+function restPage()
+{
+    return("Hello");
+}
