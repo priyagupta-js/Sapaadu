@@ -1,4 +1,8 @@
 function restPage()
 {
-    return("Hello");
+    return(
+<>
+    <h1>Upload the details</h1>
+</>
+    );
 }
