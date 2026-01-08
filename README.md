@@ -28,9 +28,9 @@ The project focuses on **clean architecture, secure authentication, state synchr
 * PM2 (Process Manager)
 
 ---
-## 🎯 Key Features
+## Key Features
 
-### 🔐 Authentication
+### Authentication
 
 * Secure **Login & Signup** using **JWT authentication**
 * Protected routes for authenticated users
@@ -154,17 +154,3 @@ Database (MongoDB)
 **Umang Doshi**
 
 ---
-
-### Why This Project Matters
-
-This project demonstrates:
-
-* Real-world cart logic
-* State synchronization
-* Secure backend design
-* Scalable architecture
-* Deployment knowledge
-
-> Built with the intention of showcasing **production-ready thinking**, not just CRUD functionality.
-
-Just tell me the next step.
