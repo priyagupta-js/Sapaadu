@@ -1,64 +1,170 @@
-<h1>React + Vite</h1>
+# VIT Sapaadu – Food Ordering Web Application
 
-<p>
-    This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-</p>
+**VIT Sapaadu** is a full-stack food ordering web application designed to make food ordering simple and reliable for students, faculties and staffs of VIT Chennai.
+The project focuses on **clean architecture, secure authentication, state synchronization, and user-friendly cart management**, making it suitable for production-level.
 
-<p>Currently, two official plugins are available:</p>
-<ul>
-    <li><a href="https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md">@vitejs/plugin-react</a> uses <a href="https://babeljs.io/">Babel</a> for Fast Refresh</li>
-    <li><a href="https://github.com/vitejs/vite-plugin-react-swc">@vitejs/plugin-react-swc</a> uses <a href="https://swc.rs/">SWC</a> for Fast Refresh</li>
-</ul>
+---
 
-<h2>Expanding the ESLint configuration</h2>
-<p>
-    If you are developing a production application, we recommend using TypeScript and enabling type-aware lint rules.
-    Check out the <a href="https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts">TS template</a>
-    to integrate TypeScript and <a href="https://typescript-eslint.io">typescript-eslint</a> in your project.
-</p>
+## Tech Stack
 
-<hr>
+### Frontend
 
-<h1>🚀 Vite Project Setup Guide</h1>
+* React.js
+* Context API / State Management
+* Axios
+* Modern UI Components
 
-<h2>📌 Prerequisites</h2>
-<p>Ensure you have the following installed:</p>
-<ul>
-    <li><a href="https://nodejs.org/">Node.js</a> (Recommended: latest LTS version)</li>
-    <li><a href="https://git-scm.com/">Git</a> (for cloning the repository)</li>
-</ul>
+### Backend
 
-<h2>1️⃣ Clone the Repository</h2>
-<pre><code>git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
-</code></pre>
+* Node.js
+* Express.js
+* MongoDB (Mongoose)
+* JWT Authentication
 
-<h2>2️⃣ Install Dependencies</h2>
-<p>Use npm, pnpm, or yarn to install dependencies:</p>
-<pre><code>npm install
-# OR
-yarn install
-# OR
-pnpm install
-</code></pre>
+### Deployment
 
-<h2>3️⃣ Setup Environment Variables</h2>
-<p>This project uses a <code>.env</code> file for sensitive configurations. Follow these steps:</p>
-<ul>
-    <li>Copy the <code>.env.example</code> file and create a <code>.env</code> file:</li>
-</ul>
-<pre><code>copy .env.example .env  # For Windows (Command Prompt)
-</code></pre>
-<p>Open <code>.env</code> and update the placeholders with your actual values.</p>
+* AWS EC2 (Free Tier)
+* Nginx (Reverse Proxy)
+* PM2 (Process Manager)
 
-<h2>4️⃣ Start the Development Server</h2>
-<p>Run the following command to start the Vite development server:</p>
-<pre><code>npm run dev
-# OR
-yarn dev
-# OR
-pnpm dev
-</code></pre>
-<p>This will start the project at <a href="http://localhost:5173/">http://localhost:5173/</a> by default.</p>
+---
+## 🎯 Key Features
 
-<h2>🎉 Happy Coding!!</h2>
+### 🔐 Authentication
+
+* Secure **Login & Signup** using **JWT authentication**
+* Protected routes for authenticated users
+* Token-based session handling
+
+---
+
+### Home Page
+
+* Displays **restaurants**
+* Selecting a restaurant navigates to its **dedicated restaurant page**
+
+---
+
+### Restaurant & Menu Management
+
+* Each restaurant has its own **menu**
+* 
+---
+
+### Cart Functionality
+
+* Add any menu item to cart
+* Increase or decrease quantity for each item
+* Same item can be added **multiple times**
+* Cart displays:
+
+  * Item name
+  * Quantity
+  * Individual price
+  * Total bill amount
+
+---
+
+### Real-Time Cart Synchronization
+
+* Quantity updates from:
+
+  * **Restaurant page** → reflect in **Cart page**
+  * **Cart page** → reflect in **Restaurant page**
+* Ensures a **single source of truth** for cart state
+
+---
+
+### Order Placement
+
+* “Place Order” button available after successful cart addition
+* Displays **Order Placed Successfully** confirmation message
+* *(Payment integration planned for future enhancement)*
+
+---
+
+## Application Flow
+
+1. User signs up / logs in
+2. Lands on Home Page with restaurant listings
+3. Selects a restaurant → views menu
+4. Adds items to cart (with quantity control)
+5. Reviews cart and total bill
+6. Places order → receives success confirmation
+
+---
+
+## Project Architecture (High Level)
+
+```text
+Frontend (React)
+│
+├── Authentication (JWT)
+├── Restaurant Listing
+├── Menu & Cart State Management
+│
+Backend (Node.js + Express)
+│
+├── Auth APIs
+├── Restaurant APIs
+├── Menu APIs
+├── Cart Logic
+│
+Database (MongoDB)
+│
+├── Users
+├── Restaurants
+├── Menu Items
+└── Orders
+```
+
+---
+
+## Security & Best Practices
+
+* JWT-based authentication
+* Password hashing
+* RESTful API design
+* Environment variables for secrets
+* Clean separation of frontend & backend
+
+---
+
+## Deployment
+* Deployed on **AWS EC2 Free Tier**
+* Backend served via **Node.js + PM2**
+* Frontend hosted with production build
+* Reverse proxy using **Nginx**
+
+---
+
+## Future Enhancements
+
+* Online payment integration (Razorpay / Stripe)
+* Order history page
+* Admin dashboard for restaurant & menu management
+* Responsive mobile-first UI
+* Real-time order tracking
+
+---
+
+## Author
+
+**Priya Gupta**
+**Umang Doshi**
+
+---
+
+### Why This Project Matters
+
+This project demonstrates:
+
+* Real-world cart logic
+* State synchronization
+* Secure backend design
+* Scalable architecture
+* Deployment knowledge
+
+> Built with the intention of showcasing **production-ready thinking**, not just CRUD functionality.
+
+Just tell me the next step.
