@@ -148,6 +148,67 @@ Database (MongoDB)
 
 ---
 
+## Run the Project Locally
+
+## Prerequisites
+
+Make sure you have the following installed:
+
+Node.js (v16 or above)
+npm or yarn
+MongoDB (local or MongoDB Atlas)
+Git
+
+# Clone the Repository
+```bash 
+git clone https://github.com/your-username/vit-sapaadu.git
+cd vit-sapaadu
+```
+# Backend Setup
+```bash
+cd backend
+npm install
+```
+
+# Create a .env file inside the backend folder:
+```bash
+PORT=5000
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret
+```
+
+# Start the backend server:
+```bash
+npm start
+```
+
+# Server will run on:
+```bash
+http://localhost:5000
+```
+
+# Frontend Setup
+
+# Open a new terminal:
+
+```bash
+cd frontend
+npm install
+npm start
+```
+
+## Frontend will run on:
+```bash
+http://localhost:3000
+```
+
+## Connecting Frontend & Backend
+
+## Ensure the API base URL in the frontend matches:
+```bash
+http://localhost:5000/api
+```
+
 ## Author
 
 **Priya Gupta**
